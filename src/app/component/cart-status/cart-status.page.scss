@@ -1,0 +1,72 @@
+
+.container{
+    margin-top: 80px;
+}
+
+.buttonbody {
+	font-family: Inconsolata, monospace;
+	font-size: 15px;
+	background-color: yellow;
+    text-emphasis-color: black;
+	display: grid;
+	place-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.linearVerticalLayout{
+    flex-direction: column;
+}
+
+.linearHorizontalLayout{
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+
+.widthHorizontalPercent{
+flex-direction: row;
+margin: 10px;
+align-items: center;
+align-content: center;
+align-self: center;
+}
+
+.width60verticalPercent{
+    width: 60%;
+    flex-direction: column;
+}
+
+.width40verticalPercent{
+width: 100%;
+flex-direction: column;
+
+}
+
+.smallTextSize{
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+    text-align: center;
+}
+
+.medTextSize{
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.buttonStyle{
+    height: 40dp;
+    width: 40dp;
+    background-color: bisque;
+    border-radius: 1px;
+    border-color: black;
+}
+

@@ -1,0 +1,47 @@
+
+<p class="background"  ></p>
+<!-- 
+ -->
+
+   <!-- fab placed to the top end -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button  routerLink="/menu/cartProducts">
+      <ion-icon name="cart" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-searchbar showCancelButton="never" placeholder="search" debounce="500" (ionChange)="searchType($event)"></ion-searchbar>
+ <ion-content [scrollEvents]="true">
+
+
+
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let tempProduct of productsbyName" size="6" >
+          <preload-image routerLink="/menu/productdetail/{{tempProduct.id}}" [ratio]="{w: 1, h: 1}" [src]="tempProduct.imageUrl"></preload-image>
+          <ion-label>{{tempProduct.name}}</ion-label>
+          <ion-label >{{ tempProduct.unitPrice | currency: 'USD'}}</ion-label>
+          <ion-button (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">Add to cart</ion-button>
+        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+
+
+ 
+
+</ion-content>
+
+
+
+
+<!-- <li *ngFor="let tempProductCategory of productCategory">
+    <a routerLink="/category/{{tempProductCategory.id}}" routerLinkAction="active-link">
+      <h6 class="text-muted"> {{tempProductCategory.categoryName}}</h6>
+    </a>>
+  </li>> -->
+
+  

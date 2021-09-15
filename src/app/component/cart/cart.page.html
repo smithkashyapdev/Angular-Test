@@ -1,0 +1,89 @@
+<ion-content class="linearLayout" fullscreen>
+
+
+  <ion-card class="container">
+    <ion-card-header>
+      <ion-card-title>Cart Total</ion-card-title>
+      <ion-card-subtitle>Total Quantity: {{totalQuantity}}</ion-card-subtitle>
+      <ion-card-subtitle>Shipping: FREE</ion-card-subtitle>
+      <ion-card-subtitle>Total Price: {{totalPrice}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-buttons>
+      <ion-button class="buttonbody" expand="full">Proceed to buy ({{totalQuantity}})</ion-button>
+    </ion-buttons>
+  </ion-card>
+
+
+  
+
+  <ion-content [scrollEvents]="true">
+    
+    <ion-list *ngIf="cartItems.length > 0">
+
+
+      <ion-item *ngFor="let cartItem of cartItems" class="ion-text-wrap">
+
+        <ion-grid>
+
+          <ion-row class="ion-align-items-center">
+
+            <ion-row>
+
+              <ion-col >
+                <ion-label>{{ cartItem.name }}</ion-label>
+              </ion-col>
+           </ion-row>
+
+            <ion-row>
+              <img src="{{cartItem.imageUrl}}" class="img-responsive" width="150px" />
+
+            </ion-row>
+
+            <ion-col size="3" class="ion-align-self-center">
+
+              <ion-button color="medium" fill="clear" (click)="decrementQuantity(cartItem)">
+                <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
+              </ion-button>
+
+              </ion-col>
+
+              <ion-col size="1" class="ion-align-self-center">
+                {{ cartItem.quantity }}
+              </ion-col>
+
+
+              <ion-col size="2" class="ion-align-self-center">
+                <ion-button color="medium" fill="clear" (click)="incrementQuantity(cartItem)">
+                  <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+
+
+              <ion-col size="1" class="ion-align-self-center">
+                <ion-button color="medium" fill="clear" (click)="removeProduct(cartItem)">
+                  <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+                </ion-button>
+              </ion-col>
+
+          </ion-row>
+
+          
+
+          </ion-grid>
+
+        </ion-item>
+
+
+     
+    </ion-list>
+
+      
+    <ion-list *ngIf="cartItems.length === 0">
+      <ion-item>You cart is empty.</ion-item>
+    </ion-list>
+
+  </ion-content>
+
+
+</ion-content>

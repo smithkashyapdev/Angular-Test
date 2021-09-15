@@ -1,0 +1,19 @@
+<ion-content class="linearLayout" fullscreen>
+
+
+<ion-card class="container">
+
+  <ion-img src="{{product.imageUrl}}" class="detail-img"></ion-img>
+
+
+  <ion-label>{{product.name}}</ion-label>
+  <ion-label class="price">{{product.unitPrice | currency:'USD'}}</ion-label>
+  <ion-button (click)="addToCart(product)" class="btn btn-primary btn-sm">Add to cart</ion-button>
+
+ 
+  <ion-card-subtitle>Description</ion-card-subtitle>
+  <ion-card-content>{{product.description}}</ion-card-content>
+
+</ion-card>
+
+</ion-content>

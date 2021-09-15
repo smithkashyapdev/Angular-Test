@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>{{selectedMenu}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+
+         
+
+    </ion-buttons>
+
+    <ion-buttons slot="end" >
+
+      
+
+      <ion-button color="primary" fill="clear">
+        {{totalPrice | currency: 'USD'}} <span>{{totalQuantity}}</span> 
+        <ion-icon slot="end" name="cart"></ion-icon>
+    </ion-button>
+
+     
+    <ion-button color="primary" fill="clear">
+      
+      <ion-icon slot="end" name="exit"></ion-icon>
+  </ion-button>
+
+
+    </ion-buttons>
+
+   
+  
+  </ion-toolbar>
+ 
+</ion-header>
